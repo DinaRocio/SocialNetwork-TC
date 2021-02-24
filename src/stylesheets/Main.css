@@ -1,22 +1,88 @@
-:root {
-  --primary-color: #4D2DD9;
-  --secundary-color: #63E6C3;
-  --color-dark-blue: #598AB9;
-  --color-white-text: #ffffff;
-  --color-gray-text: #DBDBDB;
-  --color-dark-brown: #414141;
-  --color-light-grey: #EDEDED;
-  --color-light-red: #CD6C6980;
-  --color-light-blue: #6D949880;
-  --color-brown-blue: #9E997080;
+
+.boards_section{
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
+.boards_section__titles{
+  color: var(--color-white-text);
+  font-weight: 800;
+  font-size: 24px;
+}
+.board_grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  list-style: none;
+  gap: 12px;
+}
+.boardItem{
+  height: 152px;
+  width: 155px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 4px 10px 13px 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.board_text{
+  color: #DBDBDB;
+  font-weight: 800;
+  font-size: 30px;
+  background-color: transparent;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: 0;
-  font-family: 'Inconsolata', monospace;
-  font-style: normal;
-  /* color: var(--color-white-text); */
-  background: var(--primary-color);
+
+/* Colaborator reel */
+.colaborator_section{
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 10px;
+}
+.main_title{
+  color: var(--color-white-text);
+  font-weight: 700;
+}
+.create_colaborator{
+  background-color: var(--color-dark-blue);
+  color: var(--color-white-text);
+  font-size: 22px;
+  padding: 12px;
+  width: 20px;
+  height: 20px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+.fa-plus{
+  background-color: transparent;
+}
+
+.colaborator_list{
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  background-color: transparent;
+}
+.colaborator_item{
+  background-color: transparent;
+}
+.colaborator_picture{
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  width: 42px;
+  height: 42px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  padding: 3px;
+}
+.colaborator_picture img {
+  height: 100%;
+  width: 100%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
 }

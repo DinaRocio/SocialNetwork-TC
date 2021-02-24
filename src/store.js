@@ -1,4 +1,6 @@
-const STORE = {
+let ID = 0
+
+const store = {
   colaborators: [ 
     {
     id: 1,
@@ -17,13 +19,33 @@ const STORE = {
   ],
   boards: [
     {
-      id: 10,
-      title: "Codeable Postulation",
+      id: ID++,
+      title: "Todo for today",
       myBoards: true,
     },
     {
-      id: 10,
-      title: "Codeable Postulation",
+      id: ID++,
+      title: "Todo for today 2",
+      myBoards: false,
+    },
+    {
+      id: ID++,
+      title: "Newww one",
+      myBoards: true,
+    },
+    {
+      id: ID++,
+      title: "Newww false one",
+      myBoards: false,
+    },
+    {
+      id: ID++,
+      title: "Todo for today 3",
+      myBoards: true,
+    },
+    {
+      id: ID++,
+      title: "Todo for today 4",
       myBoards: false,
     }
   ],
@@ -44,3 +66,5 @@ const STORE = {
     }
   ]
 }
+
+export { store }
