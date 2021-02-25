@@ -1,17 +1,8 @@
 import { store } from "./../store";
-import ShowBoard from "./ShowBoard";
 
-function BoardItem(){
+function BoardItem({goto}){
 
-  // const show = () => {
-  //   console.log('lalalala')
-  //   return(
-  //     <>
-  //     <ShowBoard />
-  //     </>
-  //   )
-    
-  // }
+  
 
   const myBoards = store.boards.filter((board) => board.myBoards == true);
   const otherBoards = store.boards.filter((board) => board.myBoards !== true);
@@ -24,7 +15,7 @@ function BoardItem(){
     {myBoards.map((myBoard) => {
       return (
           <li className="board_grid"key={myBoard.title} >
-            <div className="boardItem" onClick={show} >
+            <div className="boardItem" onClick={() => goto("showBoard")} >
               <p className="board_text">{myBoard.title}</p>
               <ul className="colaborator_list">
                 <li className="colaborator_item">
