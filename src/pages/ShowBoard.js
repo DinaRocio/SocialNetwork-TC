@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/header";
 import CardModal from "../components/CardModal"
 import CreateListModal from "../components/CreateListModal"
+import CreateColabModal from "../components/CreateColabModal"
 import "../stylesheets/CardModal.css"; 
 import "../stylesheets/CreateListModal.css";
 import { VscAdd } from "react-icons/vsc";
@@ -88,7 +89,7 @@ function ShowBoard({goto, datalist}) {
         </div>
       </section>
       {/* <CardModal /> */}
-      <CreateListModal />
+      {/* <CreateColabModal /> */}
     </>
   );
 }

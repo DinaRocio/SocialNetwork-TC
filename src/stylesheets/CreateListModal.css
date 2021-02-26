@@ -1,3 +1,4 @@
+
 .list_modal_container{
   background-color: white;
   justify-content: center;
@@ -31,5 +32,5 @@
   font-size: 17px;
   font-weight: bolder;
   border: none;
-  padding: 12px 132px 14px 122px;
+  padding: 14px 12px;
 }

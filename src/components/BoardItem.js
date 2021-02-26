@@ -1,5 +1,6 @@
 import { store } from "./../store";
-
+import  LogoutModal  from "./LogoutModal"
+import "../stylesheets/LogoutModal.css";
 
 
 function BoardItem({goto, datalist}){
@@ -11,6 +12,7 @@ function BoardItem({goto, datalist}){
   
   
   return(
+    <>
     <section className="boards_section">
     <h2 className="boards_section__titles">My Boards</h2>
     <ul className="my_boards board_grid" >
@@ -57,8 +59,10 @@ function BoardItem({goto, datalist}){
     } )}
     </ul>
     </section>
-    
+    <LogoutModal />
+   </> 
   )
+  
 }
 
 export default BoardItem
