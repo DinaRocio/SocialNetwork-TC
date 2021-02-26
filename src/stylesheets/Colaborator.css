@@ -30,9 +30,11 @@
 
 .colaborator_list{
   display: flex;
-  gap: 12px;
+
+  gap: 5px;
   list-style: none;
   background-color: transparent;
+
 }
 .colaborator_item{
   background-color: transparent;

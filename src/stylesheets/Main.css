@@ -25,11 +25,10 @@
   width: 152px;
   background-color: white;
   border-radius: 5px;
-  padding: 4px 10px 13px 4px;
+  padding: 4px 10px 13px 10px;
   display: flex;
   flex-direction: column;
-  
-  gap: 35px;
+  justify-content: space-between;
 }
 .board_text{
   color: #DBDBDB;

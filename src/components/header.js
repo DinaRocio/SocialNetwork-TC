@@ -5,7 +5,7 @@ function Header(){
   return (
     <header className="header">
     <div className="left-elements">
-      <a href="#home" className="js-to-home-link">
+      <a href="#home" className="js-to-home-link" >
         <i className="fas fa-home"></i>
       </a>
       <div className="bars">
@@ -18,3 +18,5 @@ function Header(){
   )
 }
 export default Header
+
+// onClick={() => goto("showBoard")
