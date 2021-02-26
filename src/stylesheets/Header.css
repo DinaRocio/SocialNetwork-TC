@@ -19,6 +19,9 @@
   font-family: 'Inconsolata', monospace;
   font-style: normal;
   /* color: var(--color-white-text); */
+  
+}
+body{
   background: var(--primary-color);
 }
 /** Header */
@@ -46,13 +49,13 @@
   font-size: 23px;
 }
 .long_bar{
-  height: 28px;
+  height: 29.7px;
   width: 5px;
   background-color: white;
   border-radius: 5px;
 }
 .small_bar{
-  height: 23px;
+  height: 24.75px;
   width: 5px;
   background-color: white;
   border-radius: 5px;

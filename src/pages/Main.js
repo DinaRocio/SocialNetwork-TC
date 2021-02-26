@@ -5,8 +5,10 @@ import "../stylesheets/Main.css";
 import "../stylesheets/Colaborator.css";
 import "../stylesheets/List.css";
 import { useState } from 'react'
+import ShowBoard from './ShowBoard';
 
 function Main({goto}){
+  
   const [datalist] = useState([
     {
       id: 1,
@@ -72,7 +74,8 @@ function Main({goto}){
 
   return(
     <>
-    <Header/>
+    <Header  />
+    
     <main className="main_section">
         <BoardItem goto={goto} datalist={datalist} />
     </main>

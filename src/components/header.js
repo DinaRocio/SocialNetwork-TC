@@ -1,12 +1,13 @@
 import React from 'react';
 import "../stylesheets/Header.css";
 
-function Header(){
+function Header({goto}){
   return (
     <header className="header">
     <div className="left-elements">
+      {/* aqui falta preguntar que si es que currentView = 'main', el contenido de abajo no aparezca */}
       <a href="#home" className="js-to-home-link" >
-        <i className="fas fa-home"></i>
+        <i className="fas fa-home" onClick={() => goto('main')}></i>
       </a>
       <div className="bars">
         <span className="long_bar"></span>

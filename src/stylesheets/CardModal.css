@@ -1,0 +1,122 @@
+.modal_container{
+  background-color: white;
+  justify-content: center;
+  position: fixed; 
+  z-index: 100; 
+  left: 0;
+  top: 0;
+  width: 91vw; /* Full width */
+  height: 78vh; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  border-radius: 5px;
+  padding: 20px 10px 20px 10px;
+  
+}
+.close {
+  color: #aaaaaa;
+  font-size: 22px;
+  stroke-width: 0.6;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.card-form{
+  
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+}
+.card-input{
+  
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  
+}
+.title-input{
+  border: none;
+  background-color: var(--color-light-grey);
+  color:#5C5B5B;
+  font-size: 18px;
+  padding: 7px 10px 7px 10px;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+}
+.card__form-label{
+  
+  color: #414141;
+  font-size: 18px;
+  Font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+.description-input{
+  
+  display: flex;
+  flex-direction: column;
+  gap:3px;
+  border-radius: 5px;
+}
+.description-input{
+  color:transparent;
+  
+}
+.description-input_input{
+  height: 79px;
+  padding: 8px 10px 41px 10px;
+  border: none;
+  background-color: var(--color-light-grey);
+  color:#5C5B5B;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+}
+.comment-input_input{
+  height: 68px;
+  padding: 9px 10px 41px 10px;
+  border: none;
+  background-color: var(--color-light-grey);
+  color:#5C5B5B;
+  border-radius: 5px;
+}
+.tags_group{
+  display: flex;
+  
+  gap: 5px;
+  margin-top: 17px;
+  margin-bottom: 15px;
+}
+.tags_item{
+  height: 18px;
+  width: 40px;
+  list-style: none;
+  padding: 2px 2px 2px 5px;
+  border-radius: 5px;
+  
+  background-color: #6D949880;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: white;
+  font-weight: 800;
+}
+
+.comments_group{
+  display: flex;
+  flex-direction: column;
+  
+  gap:10px;
+  margin-top: 12px;
+  margin-bottom: 17px;
+}
+.comments_item{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  
+}
+.comment{
+  font-family: 'Roboto', sans-serif;
+  
+  color: #5C5B5B;
+}

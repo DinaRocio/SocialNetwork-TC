@@ -23,7 +23,7 @@
 }
 .create_colaborator i{
   position: absolute;
-  background-color: transparent;
+  
   top: 7px;
   left:9px;
 }
@@ -33,11 +33,6 @@
 
   gap: 5px;
   list-style: none;
-  background-color: transparent;
-
-}
-.colaborator_item{
-  background-color: transparent;
 }
 .colaborator_picture{
   background: rgb(34,193,195);

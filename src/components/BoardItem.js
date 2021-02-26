@@ -1,5 +1,7 @@
 import { store } from "./../store";
 
+
+
 function BoardItem({goto, datalist}){
 
   
