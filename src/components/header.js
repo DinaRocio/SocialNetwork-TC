@@ -1,5 +1,6 @@
 import React from 'react';
 import "../stylesheets/Header.css";
+import { FiHome } from "react-icons/fi"; 
 
 function Header({goto}){
   return (
@@ -7,7 +8,8 @@ function Header({goto}){
     <div className="left-elements">
       {/* aqui falta preguntar que si es que currentView = 'main', el contenido de abajo no aparezca */}
       <a href="#home" className="js-to-home-link" >
-        <i className="fas fa-home" onClick={() => goto('main')}></i>
+        <FiHome className="home-button" onClick={() => goto('main')}/>
+        
       </a>
       <div className="bars">
         <span className="long_bar"></span>

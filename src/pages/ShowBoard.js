@@ -56,7 +56,7 @@ function ShowBoard({goto, datalist}) {
           
           
           <div className="action-buttons">
-            <VscAdd />
+          <VscAdd className="action-icon" />
             <a href="add-card" className="addCardLink">Add new card</a>
           </div>
         </div>
@@ -68,7 +68,7 @@ function ShowBoard({goto, datalist}) {
             <li classname="card-list"><div className="list__card-item">Add social networks... </div></li>
           </ul>
           <div className="action-buttons">
-            <i className="icon fas fa-plus"></i>
+          <VscAdd className="action-icon" />
             <a href="add-card" className="addCardLink">Add new card</a>
           </div>
         </div>
@@ -85,7 +85,8 @@ function ShowBoard({goto, datalist}) {
           </div>
         </div>
       </section>
-      <CardModal />
+      {/* <CardModal /> */}
+      
     </>
   );
 }

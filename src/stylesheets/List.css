@@ -17,8 +17,10 @@
   flex-shrink:0;
 }
 .create_list-icon{
-  font-size: 22px;
-  color: white;
+  font-size: 19px;
+    color: white;
+    list-style: none;
+    stroke-width: 0.9;
 }
 
 
@@ -46,6 +48,11 @@
 .list__card-icon{
   
   list-style: none;
+  position: absolute;
+  top: 11px;
+  left: 10px;
+  font-size: 17px;
+  stroke-width: 1.4;
 }
 
 .list__card-title{
@@ -58,6 +65,9 @@
   height: 31px;
   width: 100%;
   background-color: var(--color-light-grey);
+  font-family: 'Roboto', sans-serif;
+  color: #5C5B5B;
+  font-size: 15px;
   border-radius: 5px;
   display: flex;
   text-align: center;
@@ -78,11 +88,12 @@
   
 }
 .action-icon{
-  font-size: 14px;
-  color: #B1B1B1;
+  font-size: 17px;
+    color: #B1B1B1;
+    stroke-width: 1;
 }
 .addCardLink{
-  
   color: #B1B1B1;
   text-decoration: none;
+  font-family: 'Roboto', sans-serif;
 }

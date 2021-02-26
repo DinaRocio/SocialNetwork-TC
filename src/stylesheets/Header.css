@@ -44,7 +44,7 @@ body{
   gap: 3px;
   align-items: flex-end;
 }
-.fa-home{
+.home-button{
   color: var(--color-white-text);
   font-size: 23px;
 }

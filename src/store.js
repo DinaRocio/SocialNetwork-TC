@@ -1,27 +1,44 @@
-let ID = 0
+let ID = 0;
 
 const store = {
-  colaborators: [ 
-    {
+  user: {
     id: 1,
-    username:"Susan",
-    email: "susan@core.com",
+    username: "Dina",
+    email: "dina@core.com",
     picture:
+      "https://images.rappi.pe/restaurants_background/a26642bb-e0c0-4fc1-8cd6-1646889b3fba-1610229527822.jpeg?d=128x80&e=webp",
+  },
+  colaborators: [
+    {
+      id: 2,
+      username: "Susan",
+      email: "susan@core.com",
+      picture:
         "https://images.rappi.pe/restaurants_background/a26642bb-e0c0-4fc1-8cd6-1646889b3fba-1610229527822.jpeg?d=128x80&e=webp",
     },
     {
-      id: 1,
-      username:"Susan",
+      id: 3,
+      username: "Susan",
       email: "susan@core.com",
       picture:
-          "https://images.rappi.pe/restaurants_background/a26642bb-e0c0-4fc1-8cd6-1646889b3fba-1610229527822.jpeg?d=128x80&e=webp",
-      },
+        "https://images.rappi.pe/restaurants_background/a26642bb-e0c0-4fc1-8cd6-1646889b3fba-1610229527822.jpeg?d=128x80&e=webp",
+    },
+    {
+      id: 4,
+      username: "Susan",
+      email: "susan@core.com",
+      picture:
+        "https://images.rappi.pe/restaurants_background/a26642bb-e0c0-4fc1-8cd6-1646889b3fba-1610229527822.jpeg?d=128x80&e=webp",
+    },
   ],
   boards: [
     {
       id: ID++,
       title: "Todo for today",
       myBoards: true,
+      colaboratorsPic: [
+        
+      ],
     },
     {
       id: ID++,
@@ -47,24 +64,32 @@ const store = {
       id: ID++,
       title: "Todo for today 4",
       myBoards: false,
-    }
+    },
   ],
   lists: [
     {
       id: 67,
       boardId: 1,
       title: "Comida",
-      tag: [ 'home', 'hacer', 'now'],
-      comments: [
+      // cards inicia
+      cards: [
         {
-          commentId: 1,
-          listId:1,
-          colaboratorId: 1,
-          body: "a new comment",
-        }
-      ]
-    }
-  ]
-}
+          title: "new title",
+          description: "none",
+          tag: ["home", "hacer", "now"],
+          comments: [
+            {
+              commentId: 1,
+              listId: 1,
+              colaboratorId: 1,
+              body: "a new comment",
+            },
+          ],
+        },
+      ],
+      // cards fin
+    },
+  ],
+};
 
-export { store }
+export { store };
