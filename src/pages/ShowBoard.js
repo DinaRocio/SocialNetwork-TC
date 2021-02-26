@@ -46,9 +46,30 @@ function ShowBoard() {
           <div className="list__card-item">Add social networks... </div>
           <div className="list__card-item">Add social networks... </div>
           <div className="list__card-item">Add social networks... </div>
+          <div className="list__card-item">Add social networks... </div>
           <div className="action-buttons">
-            <i class="icon fas fa-plus"></i>
-            <a href="add-card" className="addCard">Add new card</a>
+            <i className="icon fas fa-plus"></i>
+            <a href="add-card" className="addCardLink">Add new card</a>
+          </div>
+        </div>
+        <div className="list_card">
+          <h2 className="list__card-title">Todo</h2>
+          <div className="list__card-item">Add social networks... </div>
+          <div className="list__card-item">Add social networks... </div>
+          <div className="list__card-item">Add social networks... </div>
+          <div className="action-buttons">
+            <i className="icon fas fa-plus"></i>
+            <a href="add-card" className="addCardLink">Add new card</a>
+          </div>
+        </div>
+        <div className="list_card">
+          <h2 className="list__card-title">Todo</h2>
+          <div className="list__card-item">Add social networks... </div>
+          <div className="list__card-item">Add social networks... </div>
+          <div className="list__card-item">Add social networks... </div>
+          <div className="action-buttons">
+            <i className="icon fas fa-plus"></i>
+            <a href="add-card" className="addCardLink">Add new card</a>
           </div>
         </div>
       </section>

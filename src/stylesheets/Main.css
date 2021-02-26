@@ -11,10 +11,14 @@
   font-size: 24px;
 }
 .board_grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr ;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
   list-style: none;
   gap: 12px;
+}
+.board_li{
+  flex-shrink: 0;
 }
 .boardItem{
   height: 152px;
@@ -24,6 +28,7 @@
   padding: 4px 10px 13px 4px;
   display: flex;
   flex-direction: column;
+  
   gap: 35px;
 }
 .board_text{

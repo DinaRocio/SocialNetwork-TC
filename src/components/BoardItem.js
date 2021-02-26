@@ -14,7 +14,7 @@ function BoardItem({goto}){
     <ul className="my_boards board_grid" >
     {myBoards.map((myBoard) => {
       return (
-          <li className="board_grid"key={myBoard.title} >
+          <li className="board_li"key={myBoard.title} >
             <div className="boardItem" onClick={() => goto("showBoard")} >
               <p className="board_text">{myBoard.title}</p>
               <ul className="colaborator_list">
@@ -38,7 +38,7 @@ function BoardItem({goto}){
       <ul className="other_boards board_grid">
       {otherBoards.map((otherBoard) => {
         return (
-          <li className="board_grid" key={otherBoard.title}>
+          <li className="board_li" key={otherBoard.title}>
             <div className="boardItem" >
               <p className="board_text">{otherBoard.title}</p>
               <ul className="colaborator_list">
