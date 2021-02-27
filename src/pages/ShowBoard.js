@@ -9,7 +9,7 @@ import { VscAdd } from "react-icons/vsc";
 
 function ShowBoard({goto, datalist}) {
 
-
+  console.log(datalist)
   return (
     <>
       <Header goto={goto} />
