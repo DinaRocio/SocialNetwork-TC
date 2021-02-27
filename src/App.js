@@ -69,18 +69,20 @@ function App() {
       ],
     },
   ]);
-
+  const [actualId, setActualId] = useState(0)
+  console.log(actualId)
+  
   const [route, setRoute] = useState('main')
 
     let currentView = null;
 
     switch (route) {
       case 'main':
-        currentView = <Main goto={setRoute} datalist={datalist} />;
-
+        currentView = <Main goto={setRoute} datalist={datalist} selectPage={(id) => setActualId(id)} />;
+       
         break;
       case 'showBoard':
-        currentView = <ShowBoard goto={setRoute} datalist={datalist}/>;
+        currentView = <ShowBoard goto={setRoute} datalist={datalist} />;
         break;
     }
 

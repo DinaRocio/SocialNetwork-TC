@@ -3,8 +3,9 @@ import "../stylesheets/Header.css";
 import HomeButton from './HomeButton';
 import { useState } from 'react';
 
-function Header({goto}){
+function Header({onClick, goto}){
 
+  
  
   
   return (
@@ -21,7 +22,10 @@ function Header({goto}){
         <span className="small_bar"></span>
       </div>
     </div>
-    <div className="profile_icon">YL</div>
+    <div onClick={(e) => {
+            e.preventDefault();
+            onClick();
+          }} className="profile_icon">YL</div>
   </header>
   )
 }
