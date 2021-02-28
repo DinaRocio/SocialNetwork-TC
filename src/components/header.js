@@ -3,7 +3,7 @@ import "../stylesheets/Header.css";
 import HomeButton from './HomeButton';
 import { useState } from 'react';
 
-function Header({onClick, goto}){
+function Header({onClick, goto, actualRoute}){
 
   
  
@@ -16,7 +16,7 @@ function Header({onClick, goto}){
         <FiHome className="home-button" onClick={() => goto('main')}/>
         
       </a> */}
-      <HomeButton goto={goto} />
+      {actualRoute=="main" ? "" : <HomeButton goto={goto} />}
       <div className="bars">
         <span className="long_bar"></span>
         <span className="small_bar"></span>

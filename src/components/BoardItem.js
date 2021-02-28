@@ -21,7 +21,7 @@ function BoardItem({ goto, datalist }) {
               <li className="board_li" key={myBoard.id} >
                 <div
                   className="boardItem"
-                  onClick={(id) => goto("showBoard")}
+                  onClick={() => goto(myBoard.id, "showBoard")}
                   // onClick={(id) => goto(myBoard.id,"showBoard")}
                 >
                   <p className="board_text">{myBoard.title}</p>
