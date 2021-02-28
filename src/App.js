@@ -84,7 +84,7 @@ function App() {
        
         break;
       case 'showBoard':
-        currentView = <ShowBoard goto={setRoute} id={id}/>;
+        currentView = <ShowBoard goto={setRoute} id={id} datalist={datalist}/>;
         break;
     }
 

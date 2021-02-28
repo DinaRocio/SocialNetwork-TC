@@ -8,8 +8,12 @@ import "../stylesheets/CardModal.css";
 import "../stylesheets/CreateListModal.css";
 import { VscAdd } from "react-icons/vsc";
 
-function ShowBoard({ goto, id }) {
+function ShowBoard({ goto, id, datalist }) {
   console.log(id);
+
+  const boardId = datalist.filter((board) => board.id == id);
+
+  console.log(boardId[0].title);
 
   const [showLogout, setShowLogout] = useState(false);
 
@@ -24,7 +28,7 @@ function ShowBoard({ goto, id }) {
       {showLogout && <LogoutModal onCancel={() => setShowLogout(false)} />}
       <Header goto={goto} onClick={() => setShowLogout(true)} />
       <section className="colaborator_section">
-        <h2 className="boards_section__titles">Todo for today</h2>
+        <h2 className="boards_section__titles">{boardId[0].title}</h2>
         <div className="colaborator__reel">
           <ul className="colaborator_list">
             {showCreateColab && (
@@ -36,26 +40,15 @@ function ShowBoard({ goto, id }) {
                 onClick={() => setShowCreateColab(true)}
               />
             </div>
-            <li className="colaborator_item">
-              <div className="colaborator_picture">
-                <img
-                  src={
-                    "https://www.labreabakery.com/sites/default/files/styles/teaser/public/2018-04/Melissa%20Trimmer%20Headshot-cropped-730.png?itok=0HnVg9_P"
-                  }
-                  alt="pic"
-                />
-              </div>
-            </li>
-            <li className="colaborator_item">
-              <div className="colaborator_picture">
-                <img
-                  src={
-                    "https://www.leisureopportunities.co.uk/images/995586_746594.jpg"
-                  }
-                  alt="pic"
-                />
-              </div>
-            </li>
+            {boardId[0].colaboratorsPic.map((pic) => {
+              return (
+                <li className="colaborator_item">
+                  <div className="colaborator_picture">
+                    <img src={pic} alt="pic" />
+                  </div>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </section>

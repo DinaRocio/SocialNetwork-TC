@@ -46,7 +46,7 @@ function BoardItem({ goto, datalist }) {
           {otherBoards.map((otherBoard) => {
             return (
               <li className="board_li" key={otherBoard.id}>
-                <div className="boardItem">
+                <div className="boardItem" onClick={() => goto(otherBoard.id, "showBoard")}>
                   <p className="board_text">{otherBoard.title}</p>
                   <ul className="colaborator_list">
                     {otherBoard.colaboratorsPic.map((pic) => {
