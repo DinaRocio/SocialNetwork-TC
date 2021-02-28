@@ -80,11 +80,11 @@ function App() {
 
     switch (route) {
       case 'main':
-        currentView = <Main goto={setRoute} datalist={datalist}/>;
+        currentView = <Main actualRoute={route} goto={changeRoute} datalist={datalist}/>;
        
         break;
       case 'showBoard':
-        currentView = <ShowBoard goto={changeRoute} id={id}/>;
+        currentView = <ShowBoard goto={setRoute} id={id}/>;
         break;
     }
 

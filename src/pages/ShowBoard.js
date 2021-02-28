@@ -8,8 +8,8 @@ import "../stylesheets/CardModal.css";
 import "../stylesheets/CreateListModal.css";
 import { VscAdd } from "react-icons/vsc";
 
-function ShowBoard({ goto, boardId }) {
-  console.log(boardId);
+function ShowBoard({ goto, id }) {
+  console.log(id);
 
   const [showLogout, setShowLogout] = useState(false);
 

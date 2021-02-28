@@ -7,14 +7,14 @@ import "../stylesheets/List.css";
 import { useState } from "react";
 import LogoutModal from "../components/LogoutModal";
 
-function Main({ goto, datalist }) {
+function Main({ goto, datalist, actualRoute }) {
   const [showLogout, setShowLogout] = useState(false);
   const [actualId, setActualId] = useState(0);
 
   return (
     <>
       {showLogout && <LogoutModal onCancel={() => setShowLogout(false)} />}
-      <Header onClick={() => setShowLogout(true)} />
+      <Header actualRoute={actualRoute} onClick={() => setShowLogout(true)} />
 
       <main className="main_section">
         <BoardItem
