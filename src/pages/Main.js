@@ -5,7 +5,6 @@ import "../stylesheets/Main.css";
 import "../stylesheets/Colaborator.css";
 import "../stylesheets/List.css";
 import { useState } from "react";
-import ShowBoard from "./ShowBoard";
 import LogoutModal from "../components/LogoutModal";
 
 function Main({ goto, datalist }) {
