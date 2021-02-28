@@ -7,6 +7,16 @@
   width: 100%; /* Full width */
   height: 100%; 
 }
+
+.outer_space{
+  background-color: transparent;
+  position: fixed; 
+  z-index: 10; 
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Full width */
+  height: 82%;
+}
 .modal_container{
   background-color: white;
   justify-content: center;

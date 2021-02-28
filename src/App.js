@@ -3,8 +3,6 @@ import "./App.css";
 import Main from "./pages/Main";
 import ShowBoard from "./pages/ShowBoard";
 import { useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Header from "./components/header";
 
 function App() {
   const [datalist] = useState([
@@ -69,20 +67,24 @@ function App() {
       ],
     },
   ]);
-  const [actualId, setActualId] = useState(0)
-  console.log(actualId)
-  
-  const [route, setRoute] = useState('main')
+   
+  const [route, setRoute] = useState('main');
+  const [id, setId] = useState(0);
 
-    let currentView = null;
+  let currentView = null;
+
+  const changeRoute = (id = 0, route = "") => {
+    setId(id);
+    setRoute(route);
+  };
 
     switch (route) {
       case 'main':
-        currentView = <Main goto={setRoute} datalist={datalist} selectPage={(id) => setActualId(id)} />;
+        currentView = <Main goto={setRoute} datalist={datalist}/>;
        
         break;
       case 'showBoard':
-        currentView = <ShowBoard goto={setRoute} datalist={datalist} />;
+        currentView = <ShowBoard goto={changeRoute} id={id}/>;
         break;
     }
 

@@ -5,7 +5,7 @@ import ShowBoard from "../pages/ShowBoard";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function BoardItem({ goto, datalist, selectPage }) {
+function BoardItem({ goto, datalist }) {
   const myBoards = datalist.filter((board) => board.myBoards == true);
   const otherBoards = datalist.filter((board) => board.myBoards !== true);
 
@@ -18,10 +18,11 @@ function BoardItem({ goto, datalist, selectPage }) {
         <ul className="my_boards board_grid">
           {myBoards.map((myBoard) => {
             return (
-              <li className="board_li" key={myBoard.id} onClick={() => selectPage(myBoard.id)} >
+              <li className="board_li" key={myBoard.id} >
                 <div
                   className="boardItem"
-                  onClick={() => goto("showBoard")}
+                  onClick={(id) => goto("showBoard")}
+                  // onClick={(id) => goto(myBoard.id,"showBoard")}
                 >
                   <p className="board_text">{myBoard.title}</p>
                   <ul className="colaborator_list">
