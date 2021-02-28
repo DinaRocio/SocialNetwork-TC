@@ -13,7 +13,7 @@ function ShowBoard({ goto, id, datalist }) {
 
   const boardId = datalist.filter((board) => board.id == id);
 
-  console.log(boardId[0].title);
+  const currentBoard = boardId[0];
 
   const [showLogout, setShowLogout] = useState(false);
 
@@ -28,7 +28,7 @@ function ShowBoard({ goto, id, datalist }) {
       {showLogout && <LogoutModal onCancel={() => setShowLogout(false)} />}
       <Header goto={goto} onClick={() => setShowLogout(true)} />
       <section className="colaborator_section">
-        <h2 className="boards_section__titles">{boardId[0].title}</h2>
+        <h2 className="boards_section__titles">{currentBoard.title}</h2>
         <div className="colaborator__reel">
           <ul className="colaborator_list">
             {showCreateColab && (
@@ -40,9 +40,9 @@ function ShowBoard({ goto, id, datalist }) {
                 onClick={() => setShowCreateColab(true)}
               />
             </div>
-            {boardId[0].colaboratorsPic.map((pic) => {
+            {currentBoard.colaboratorsPic.map((pic) => {
               return (
-                <li className="colaborator_item">
+                <li className="colaborator_item" >
                   <div className="colaborator_picture">
                     <img src={pic} alt="pic" />
                   </div>

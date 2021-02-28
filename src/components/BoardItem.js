@@ -28,7 +28,7 @@ function BoardItem({ goto, datalist }) {
                   <ul className="colaborator_list">
                     {myBoard.colaboratorsPic.map((pic) => {
                       return (
-                        <li className="colaborator_item">
+                        <li className="colaborator_item" key={Math.random()}>
                           <div className="colaborator_picture">
                             <img src={pic} alt="pic" />
                           </div>
