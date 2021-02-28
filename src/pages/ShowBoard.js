@@ -42,7 +42,7 @@ function ShowBoard({ goto, id, datalist }) {
             </div>
             {currentBoard.colaboratorsPic.map((pic) => {
               return (
-                <li className="colaborator_item" >
+                <li className="colaborator_item" key={Math.random()*1000}>
                   <div className="colaborator_picture">
                     <img src={pic} alt="pic" />
                   </div>
@@ -65,7 +65,7 @@ function ShowBoard({ goto, id, datalist }) {
             {showCardModal && (
               <CardModal onCancel={() => setShowCardModal(false)} />
             )}
-            <li classname="card-list" onClick={() => setShowCardModal(true)}>
+            <li classname="card-list" onClick={() => setShowCardModal(true)} >
               <div className="list__card-item">Add social networks... </div>
             </li>
             <li classname="card-list">
