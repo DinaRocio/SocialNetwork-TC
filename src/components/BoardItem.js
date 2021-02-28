@@ -28,7 +28,7 @@ function BoardItem({ goto, datalist }) {
                   <ul className="colaborator_list">
                     {myBoard.colaboratorsPic.map((pic) => {
                       return (
-                        <li className="colaborator_item" key={Math.random()}>
+                        <li className="colaborator_item" key={Math.random()*1000}>
                           <div className="colaborator_picture">
                             <img src={pic} alt="pic" />
                           </div>
@@ -51,7 +51,7 @@ function BoardItem({ goto, datalist }) {
                   <ul className="colaborator_list">
                     {otherBoard.colaboratorsPic.map((pic) => {
                       return (
-                        <li className="colaborator_item">
+                        <li className="colaborator_item" key={Math.random()*1000}>
                           <div className="colaborator_picture">
                             <img src={pic} alt="pic" />
                           </div>
