@@ -19,7 +19,6 @@ function BoardItem({ goto, datalist }) {
                 <div
                   className="boardItem"
                   onClick={() => goto(myBoard.id, "showBoard")}
-                  // onClick={(id) => goto(myBoard.id,"showBoard")}
                 >
                   <p className="board_text">{myBoard.title}</p>
                   <ul className="colaborator_list">

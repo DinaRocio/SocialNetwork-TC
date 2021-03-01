@@ -19,7 +19,7 @@ function CreateListModal({ onCancel }) {
             placeholder="Type name of list..."
             className="list-input"
           />
-          <button className="submit_list">Create List</button>
+          <button type="submit" className="submit_list">Create List</button>
         </form>
       </div>
     </div>

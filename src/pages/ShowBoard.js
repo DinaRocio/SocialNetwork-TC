@@ -3,10 +3,12 @@ import Header from "../components/header";
 import CardModal from "../components/CardModal";
 import CreateListModal from "../components/CreateListModal";
 import CreateColabModal from "../components/CreateColabModal";
+import CreateCardModal from "./../components/CreateCardModal";
 import LogoutModal from "./../components/LogoutModal";
 import "../stylesheets/CardModal.css";
 import "../stylesheets/CreateListModal.css";
 import { VscAdd } from "react-icons/vsc";
+
 
 function ShowBoard({ goto, id, datalist }) {
   console.log(id);
@@ -22,6 +24,8 @@ function ShowBoard({ goto, id, datalist }) {
   const [showCreateList, setShowCreateList] = useState(false);
 
   const [showCardModal, setShowCardModal] = useState(false);
+
+  const [showCreateCardModal, setShowCreateCardModal] = useState(false);
 
   return (
     <>
@@ -42,7 +46,7 @@ function ShowBoard({ goto, id, datalist }) {
             </div>
             {currentBoard.colaboratorsPic.map((pic) => {
               return (
-                <li className="colaborator_item" key={Math.random()*1000}>
+                <li className="colaborator_item" key={Math.random() * 1000}>
                   <div className="colaborator_picture">
                     <img src={pic} alt="pic" />
                   </div>
@@ -65,7 +69,7 @@ function ShowBoard({ goto, id, datalist }) {
             {showCardModal && (
               <CardModal onCancel={() => setShowCardModal(false)} />
             )}
-            <li className="card-list" onClick={() => setShowCardModal(true)} >
+            <li className="card-list" onClick={() => setShowCardModal(true)}>
               <div className="list__card-item">Add social networks... </div>
             </li>
             <li className="card-list">
@@ -83,8 +87,16 @@ function ShowBoard({ goto, id, datalist }) {
           </ul>
 
           <div className="action-buttons">
-            <VscAdd className="action-icon" />
-            <a href="add-card" className="addCardLink">
+          {showCreateCardModal && (
+              <CreateCardModal onCancel={() => setShowCreateCardModal(false)} />
+            )}
+            <VscAdd className="action-icon" onClick={(e) => {
+      e.preventDefault();
+       setShowCreateCardModal(true)}} />
+            
+            <a href="add-card" className="addCardLink"  onClick={(e) => {
+      e.preventDefault();
+       setShowCreateCardModal(true)}}  >
               Add new card
             </a>
           </div>
@@ -123,14 +135,22 @@ function ShowBoard({ goto, id, datalist }) {
             </li>
           </ul>
           <div className="action-buttons">
-            <VscAdd className="action-icon" />
-            <a href="add-card" className="addCardLink">
+          {showCreateCardModal && (
+              <CreateCardModal onCancel={() => setShowCreateCardModal(false)} />
+            )}
+            <VscAdd className="action-icon" onClick={(e) => {
+      e.preventDefault();
+       setShowCreateCardModal(true)}} />
+            
+            <a href="add-card" className="addCardLink"  onClick={(e) => {
+      e.preventDefault();
+       setShowCreateCardModal(true)}}  >
               Add new card
             </a>
           </div>
         </div>
       </section>
-      {/* <CardModal /> */}
+      {/* <CreateCardModal /> */}
       {/* <CreateColabModal /> */}
     </>
   );
