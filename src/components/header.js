@@ -1,7 +1,6 @@
 import React from 'react';
 import "../stylesheets/Header.css";
 import HomeButton from './HomeButton';
-import { useState } from 'react';
 
 function Header({onClick, goto, actualRoute}){
 

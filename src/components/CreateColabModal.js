@@ -2,7 +2,7 @@ import React from "react";
 
 function CreateColabModal({ onCancel }) {
   return (
-    <div class="dark_container">
+    <div className="dark_container">
       <div
         className="outer_space"
         // falta señalizar que solo cuando hace click fuera del div se cierre, el input pierde funcionalidad
@@ -16,9 +16,9 @@ function CreateColabModal({ onCancel }) {
             <input
               type="text"
               placeholder="yefrioscar9814@gmail.com"
-              class="list-input"
+              className="list-input"
             />
-            <button class="submit_list">Send Invitation</button>
+            <button className="submit_list">Send Invitation</button>
           </form>
         </div>
       </div>

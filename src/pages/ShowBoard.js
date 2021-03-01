@@ -34,9 +34,9 @@ function ShowBoard({ goto, id, datalist }) {
             {showCreateColab && (
               <CreateColabModal onCancel={() => setShowCreateColab(false)} />
             )}
-            <div class="create_colaborator">
+            <div className="create_colaborator">
               <VscAdd
-                class="list__card-icon"
+                className="list__card-icon"
                 onClick={() => setShowCreateColab(true)}
               />
             </div>
@@ -65,19 +65,19 @@ function ShowBoard({ goto, id, datalist }) {
             {showCardModal && (
               <CardModal onCancel={() => setShowCardModal(false)} />
             )}
-            <li classname="card-list" onClick={() => setShowCardModal(true)} >
+            <li className="card-list" onClick={() => setShowCardModal(true)} >
               <div className="list__card-item">Add social networks... </div>
             </li>
-            <li classname="card-list">
+            <li className="card-list">
               <div className="list__card-item">Add social networks... </div>
             </li>
-            <li classname="card-list">
+            <li className="card-list">
               <div className="list__card-item">Add social networks... </div>
             </li>
-            <li classname="card-list">
+            <li className="card-list">
               <div className="list__card-item">Add social networks... </div>
             </li>
-            <li classname="card-list">
+            <li className="card-list">
               <div className="list__card-item">Add social networks... </div>
             </li>
           </ul>
@@ -92,13 +92,13 @@ function ShowBoard({ goto, id, datalist }) {
         <div className="list_card">
           <h2 className="list__card-title">Todo</h2>
           <ul className="list__card-group">
-            <li classname="card-list">
+            <li className="card-list">
               <div className="list__card-item">Add social networks... </div>
             </li>
-            <li classname="card-list">
+            <li className="card-list">
               <div className="list__card-item">Add social networks... </div>
             </li>
-            <li classname="card-list">
+            <li className="card-list">
               <div className="list__card-item">Add social networks... </div>
             </li>
           </ul>
@@ -112,13 +112,13 @@ function ShowBoard({ goto, id, datalist }) {
         <div className="list_card">
           <h2 className="list__card-title">Todo</h2>
           <ul className="list__card-group">
-            <li classname="card-list">
+            <li className="card-list">
               <div className="list__card-item">Add social networks... </div>
             </li>
-            <li classname="card-list">
+            <li className="card-list">
               <div className="list__card-item">Add social networks... </div>
             </li>
-            <li classname="card-list">
+            <li className="card-list">
               <div className="list__card-item">Add social networks... </div>
             </li>
           </ul>

@@ -1,9 +1,6 @@
-import { store } from "./../store";
-import LogoutModal from "./LogoutModal";
+
 import "../stylesheets/LogoutModal.css";
-import ShowBoard from "../pages/ShowBoard";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+
 
 function BoardItem({ goto, datalist }) {
   const myBoards = datalist.filter((board) => board.myBoards == true);

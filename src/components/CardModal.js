@@ -3,7 +3,7 @@ import { VscChromeClose } from "react-icons/vsc";
 
 function CardModal({onCancel}) {
   return (
-    <div class="dark_container">
+    <div className="dark_container">
       <div className="modal_container">
         <VscChromeClose className="close" onClick={(e) => {
       e.preventDefault();
