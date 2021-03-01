@@ -2,6 +2,7 @@
   "name": "mytrello",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dinarocio.github.io/Technicall-Challegue-InnovaFunding/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -11,8 +12,7 @@
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1",
-    "homepage": "https://dinarocio.github.io/Technicall-Challegue-InnovaFunding/"
+    "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
