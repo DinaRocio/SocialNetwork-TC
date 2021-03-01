@@ -42,6 +42,7 @@
   font-weight: bolder;
   border: none;
   padding: 14px 12px;
+  cursor: pointer;
 }
 .submit_card{
   background-color: var(--primary-color);
@@ -52,4 +53,5 @@
   font-weight: bolder;
   border: none;
   padding: 14px 12px;
+  cursor: pointer;
 }

@@ -15,12 +15,14 @@
   align-items: center;
   justify-content: center;
   flex-shrink:0;
+  cursor: pointer;
 }
 .create_list-icon{
   font-size: 19px;
     color: white;
     list-style: none;
     stroke-width: 0.9;
+    cursor: pointer;
 }
 
 
@@ -91,9 +93,11 @@
   font-size: 17px;
     color: #B1B1B1;
     stroke-width: 1;
+    cursor: pointer;
 }
 .addCardLink{
   color: #B1B1B1;
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
+  cursor: pointer;
 }

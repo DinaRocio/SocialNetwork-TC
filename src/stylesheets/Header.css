@@ -65,6 +65,7 @@ body{
   color: var(--primary-color);
   padding: 10px;
   border-radius: 100px;
+  cursor: pointer;
 }
 /* .logo {
   margin: 8px 0px;
