@@ -5,11 +5,14 @@ function LogoutModal({ onCancel }) {
   return (
     <div
       className="dark_container"
-      onClick={(e) => {
-        e.preventDefault();
-        onCancel();
-      }}
+      
     >
+      <div className="transparent_container"
+        onClick={(e) => {
+          e.preventDefault();
+          onCancel();
+        }}
+      ></div>
       <div className="logout_modal_container">
         <FiLogOut className="logout-icon" />
         <p className="logout_title">Sign out</p>

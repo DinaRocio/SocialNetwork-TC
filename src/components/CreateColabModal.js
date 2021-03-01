@@ -3,14 +3,12 @@ import React from "react";
 function CreateColabModal({ onCancel }) {
   return (
     <div className="dark_container">
-      <div
-        className="outer_space"
-        // falta señalizar que solo cuando hace click fuera del div se cierre, el input pierde funcionalidad
+       <div className="transparent_container"
         onClick={(e) => {
           e.preventDefault();
           onCancel();
         }}
-      >
+      ></div>
         <div className="list_modal_container">
           <form className="list-form">
             <input
@@ -22,7 +20,7 @@ function CreateColabModal({ onCancel }) {
             <button className="submit_list">Send Invitation</button>
           </form>
         </div>
-      </div>
+     
     </div>
   );
 }
