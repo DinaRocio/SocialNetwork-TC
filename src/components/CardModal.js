@@ -1,7 +1,7 @@
 import React from "react";
 import { VscChromeClose } from "react-icons/vsc";
 
-function CardModal({onCancel}) {
+function CardModal({ onCancel }) {
   return (
     <div className="dark_container">
       <div className="modal_container">
@@ -14,7 +14,6 @@ function CardModal({onCancel}) {
             <input
               name="title"
               type="text"
-              value="Add social networks..."
               className="title-input"
             />
             <div className="description-input">
