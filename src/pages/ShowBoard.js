@@ -9,11 +9,80 @@ import "../stylesheets/CardModal.css";
 import "../stylesheets/CreateListModal.css";
 import { VscAdd } from "react-icons/vsc";
 
-
-function ShowBoard({ goto, id, datalist }) {
+function ShowBoard({ goto, id, databoard }) {
   console.log(id);
 
-  const boardId = datalist.filter((board) => board.id === id);
+  const boardId = databoard.filter((board) => board.id === id);
+
+  const [datalist] = useState([
+    {
+      id: 67,
+      boardid: 1,
+      title: "Food",
+      // cards inicio
+      cards: [
+        {
+          id: 1,
+          title: "new task",
+          description: "none",
+          tag: ["home", "hacer", "now"],
+          comments: [
+            {
+              cardId: 1,
+              commentId: 1,
+              listId: 1,
+              colaboratorId: 1,
+              body: "a new comment",
+            },
+          ],
+        },
+        {
+          id: 1,
+          title: "nueva card jojolete",
+          description: "none",
+          tag: ["home", "hacer", "now"],
+          comments: [
+            {
+              cardId: 2,
+              commentId: 1,
+              listId: 1,
+              colaboratorId: 1,
+              body: "a new comment",
+            },
+          ],
+        },
+      ],
+      // cards fin
+    },
+    {
+      id: 69,
+      boardid: 1,
+      title: "School",
+      // cards inicio
+      cards: [
+        {
+          id: 1,
+          title: "new task",
+          description: "none",
+          tag: ["home", "hacer", "now"],
+          comments: [
+            {
+              cardId: 1,
+              commentId: 1,
+              listId: 1,
+              colaboratorId: 1,
+              body: "a new comment",
+            },
+          ],
+        },
+      ],
+      // cards fin
+    },
+  ]);
+
+  const list = datalist.filter((list) => list.boardid === boardId[0].id);
+
+  // console.log(list);
 
   const currentBoard = boardId[0];
 
@@ -63,44 +132,57 @@ function ShowBoard({ goto, id, datalist }) {
         <div className="create_list" onClick={() => setShowCreateList(true)}>
           <VscAdd className="create_list-icon" />
         </div>
-        <div className="list_card">
-          <h2 className="list__card-title">Todo</h2>
-          <ul className="list__card-group">
-            {showCardModal && (
-              <CardModal onCancel={() => setShowCardModal(false)} />
-            )}
-            <li className="card-list" onClick={() => setShowCardModal(true)}>
-              <div className="list__card-item">Add social networks... </div>
-            </li>
-            <li className="card-list">
-              <div className="list__card-item">Add social networks... </div>
-            </li>
-            <li className="card-list">
-              <div className="list__card-item">Add social networks... </div>
-            </li>
-            <li className="card-list">
-              <div className="list__card-item">Add social networks... </div>
-            </li>
-            <li className="card-list">
-              <div className="list__card-item">Add social networks... </div>
-            </li>
-          </ul>
+        {list.map((listItem) => {
+          return (
+            <div className="list_card">
+              <h2 className="list__card-title">{listItem.title}</h2>
+              <ul className="list__card-group">
+              {showCardModal && (
+                  <CardModal  onCancel={() => setShowCardModal(false)} />
+                )}
+                {listItem.cards.map((card) => {
+                
+                  return (
+                    <li
+                      className="card-list"
+                      key={card.cardId}
+                      onClick={() => setShowCardModal(true)}
+                    >
+                      <div className="list__card-item">{card.title} </div>
+                    </li>
+                  );
+                })}
+              </ul>
 
-          <div className="action-buttons">
-          {showCreateCardModal && (
-              <CreateCardModal onCancel={() => setShowCreateCardModal(false)} />
-            )}
-            <VscAdd className="action-icon" onClick={(e) => {
-      e.preventDefault();
-       setShowCreateCardModal(true)}} />
-            
-            <a href="add-card" className="addCardLink"  onClick={(e) => {
-      e.preventDefault();
-       setShowCreateCardModal(true)}}  >
-              Add new card
-            </a>
-          </div>
-        </div>
+              <div className="action-buttons">
+                {showCreateCardModal && (
+                  <CreateCardModal
+                    onCancel={() => setShowCreateCardModal(false)}
+                  />
+                )}
+                <VscAdd
+                  className="action-icon"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setShowCreateCardModal(true);
+                  }}
+                />
+
+                <a
+                  href="add-card"
+                  className="addCardLink"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setShowCreateCardModal(true);
+                  }}
+                >
+                  Add new card
+                </a>
+              </div>
+            </div>
+          );
+        })}
+
         <div className="list_card">
           <h2 className="list__card-title">Todo</h2>
           <ul className="list__card-group">
@@ -115,36 +197,25 @@ function ShowBoard({ goto, id, datalist }) {
             </li>
           </ul>
           <div className="action-buttons">
-            <VscAdd className="action-icon" />
-            <a href="add-card" className="addCardLink">
-              Add new card
-            </a>
-          </div>
-        </div>
-        <div className="list_card">
-          <h2 className="list__card-title">Todo</h2>
-          <ul className="list__card-group">
-            <li className="card-list">
-              <div className="list__card-item">Add social networks... </div>
-            </li>
-            <li className="card-list">
-              <div className="list__card-item">Add social networks... </div>
-            </li>
-            <li className="card-list">
-              <div className="list__card-item">Add social networks... </div>
-            </li>
-          </ul>
-          <div className="action-buttons">
-          {showCreateCardModal && (
+            {showCreateCardModal && (
               <CreateCardModal onCancel={() => setShowCreateCardModal(false)} />
             )}
-            <VscAdd className="action-icon" onClick={(e) => {
-      e.preventDefault();
-       setShowCreateCardModal(true)}} />
-            
-            <a href="add-card" className="addCardLink"  onClick={(e) => {
-      e.preventDefault();
-       setShowCreateCardModal(true)}}  >
+            <VscAdd
+              className="action-icon"
+              onClick={(e) => {
+                e.preventDefault();
+                setShowCreateCardModal(true);
+              }}
+            />
+
+            <a
+              href="add-card"
+              className="addCardLink"
+              onClick={(e) => {
+                e.preventDefault();
+                setShowCreateCardModal(true);
+              }}
+            >
               Add new card
             </a>
           </div>

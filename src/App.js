@@ -5,7 +5,7 @@ import ShowBoard from "./pages/ShowBoard";
 import { useState } from "react";
 
 function App() {
-  const [datalist] = useState([
+  const [databoard] = useState([
     {
       id: 1,
       title: "Todo for today",
@@ -80,11 +80,11 @@ function App() {
 
     switch (route) {
       case 'main':
-        currentView = <Main actualRoute={route} goto={changeRoute} datalist={datalist}/>;
+        currentView = <Main actualRoute={route} goto={changeRoute} databoard={databoard}/>;
        
         break;
       case 'showBoard':
-        currentView = <ShowBoard goto={setRoute} id={id} datalist={datalist}/>;
+        currentView = <ShowBoard goto={setRoute} id={id} databoard={databoard}/>;
         break;
         default:
           currentView = null

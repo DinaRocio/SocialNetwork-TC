@@ -7,7 +7,7 @@ import "../stylesheets/List.css";
 import { useState } from "react";
 import LogoutModal from "../components/LogoutModal";
 
-function Main({ goto, datalist, actualRoute }) {
+function Main({ goto, databoard, actualRoute }) {
   const [showLogout, setShowLogout] = useState(false);
   
 
@@ -20,7 +20,7 @@ function Main({ goto, datalist, actualRoute }) {
         <BoardItem
           onClick={() => setShowLogout(true)}
           goto={goto}
-          datalist={datalist}
+          databoard={databoard}
           
         />
       </main>

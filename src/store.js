@@ -71,7 +71,7 @@ const store = {
       id: 67,
       boardId: 1,
       title: "Food",
-      // cards inicia
+      // cards inicio
       cards: [
         {
           id: 1,
@@ -84,6 +84,21 @@ const store = {
               commentId: 1,
               listId: 1,
               colaboratorId: 1,
+              body: "a new comment",
+            },
+          ],
+        },
+        {
+          id: 2,
+          title: "new task 222",
+          description: "none",
+          tag: ["home", "hacer", "now"],
+          comments: [
+            {
+              cardId: 2,
+              commentId: 1,
+              listId: 1,
+              colaboratorId: 2,
               body: "a new comment",
             },
           ],

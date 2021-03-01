@@ -10,11 +10,7 @@ function Header({onClick, goto, actualRoute}){
   return (
     <header className="header">
     <div className="left-elements">
-      {/* aqui falta preguntar que si es que currentView = 'main', el contenido de abajo no aparezca */}
-      {/* <a href="#home" className="js-to-home-link" >
-        <FiHome className="home-button" onClick={() => goto('main')}/>
-        
-      </a> */}
+      
       {actualRoute==="main" ? "" : <HomeButton goto={goto} />}
       <div className="bars">
         <span className="long_bar"></span>

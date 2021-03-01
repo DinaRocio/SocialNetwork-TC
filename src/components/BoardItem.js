@@ -2,9 +2,9 @@
 import "../stylesheets/LogoutModal.css";
 
 
-function BoardItem({ goto, datalist }) {
-  const myBoards = datalist.filter((board) => board.myBoards === true);
-  const otherBoards = datalist.filter((board) => board.myBoards !== true);
+function BoardItem({ goto, databoard }) {
+  const myBoards = databoard.filter((board) => board.myBoards === true);
+  const otherBoards = databoard.filter((board) => board.myBoards !== true);
 
 
 
