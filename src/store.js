@@ -70,15 +70,17 @@ const store = {
     {
       id: 67,
       boardId: 1,
-      title: "Comida",
+      title: "Food",
       // cards inicia
       cards: [
         {
-          title: "new title",
+          id: 1,
+          title: "new task",
           description: "none",
           tag: ["home", "hacer", "now"],
           comments: [
             {
+              cardId: 1,
               commentId: 1,
               listId: 1,
               colaboratorId: 1,

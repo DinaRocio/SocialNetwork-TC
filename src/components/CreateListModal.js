@@ -9,7 +9,7 @@ function CreateListModal({onCancel}) {
     }}>
     <div className="list_modal_container">
       <form className="list-form">
-        <input type="text" placeholder="Type name of list..." className="list-input"/>
+        <input type="text" name="list_name" placeholder="Type name of list..." className="list-input"/>
         <button className="submit_list">Create List</button>
       </form>
     </div>

@@ -11,7 +11,7 @@ import { VscAdd } from "react-icons/vsc";
 function ShowBoard({ goto, id, datalist }) {
   console.log(id);
 
-  const boardId = datalist.filter((board) => board.id == id);
+  const boardId = datalist.filter((board) => board.id === id);
 
   const currentBoard = boardId[0];
 

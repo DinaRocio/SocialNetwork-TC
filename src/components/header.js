@@ -15,7 +15,7 @@ function Header({onClick, goto, actualRoute}){
         <FiHome className="home-button" onClick={() => goto('main')}/>
         
       </a> */}
-      {actualRoute=="main" ? "" : <HomeButton goto={goto} />}
+      {actualRoute==="main" ? "" : <HomeButton goto={goto} />}
       <div className="bars">
         <span className="long_bar"></span>
         <span className="small_bar"></span>

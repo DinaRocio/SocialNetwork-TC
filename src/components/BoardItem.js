@@ -3,7 +3,7 @@ import "../stylesheets/LogoutModal.css";
 
 
 function BoardItem({ goto, datalist }) {
-  const myBoards = datalist.filter((board) => board.myBoards == true);
+  const myBoards = datalist.filter((board) => board.myBoards === true);
   const otherBoards = datalist.filter((board) => board.myBoards !== true);
 
 

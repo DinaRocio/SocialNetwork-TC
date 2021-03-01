@@ -9,7 +9,7 @@ import LogoutModal from "../components/LogoutModal";
 
 function Main({ goto, datalist, actualRoute }) {
   const [showLogout, setShowLogout] = useState(false);
-  const [actualId, setActualId] = useState(0);
+  
 
   return (
     <>
@@ -21,7 +21,7 @@ function Main({ goto, datalist, actualRoute }) {
           onClick={() => setShowLogout(true)}
           goto={goto}
           datalist={datalist}
-          selectPage={(id) => setActualId(id)}
+          
         />
       </main>
     </>

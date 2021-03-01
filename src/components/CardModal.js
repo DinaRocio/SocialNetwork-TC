@@ -18,10 +18,10 @@ function CardModal({onCancel}) {
               className="title-input"
             />
             <div className="description-input">
-              <label className="card__form-label">Description</label>
+              <label htmlFor="description"  className="card__form-label">Description</label>
               <input
                 className="description-input_input"
-                name="title"
+                name="description" 
                 type="text"
                 placeholder="Type description here..."
               />
