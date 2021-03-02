@@ -21,7 +21,6 @@ function Main({ goto, databoard, actualRoute }) {
           onClick={() => setShowLogout(true)}
           goto={goto}
           databoard={databoard}
-          
         />
       </main>
     </>

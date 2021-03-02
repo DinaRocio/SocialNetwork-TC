@@ -1,6 +1,6 @@
 import React from "react";
 
-function CreateColabModal({ onCancel }) {
+function CreateColabModal({ onCancel, onSubmit }) {
   return (
     <div className="dark_container">
        <div className="transparent_container"
@@ -10,9 +10,9 @@ function CreateColabModal({ onCancel }) {
         }}
       ></div>
         <div className="list_modal_container">
-          <form className="list-form">
+          <form onSubmit={onSubmit} className="list-form">
             <input
-              name="colab_email" 
+              name="email" 
               type="text"
               placeholder="yefrioscar9814@gmail.com"
               className="list-input"

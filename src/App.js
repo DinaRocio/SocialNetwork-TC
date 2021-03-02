@@ -5,65 +5,173 @@ import ShowBoard from "./pages/ShowBoard";
 import { useState } from "react";
 
 function App() {
-  const [databoard] = useState([
+  const [databoard, setDataBoard] = useState([
     {
       id: 1,
       title: "Todo for today",
       myBoards: true,
-      colaboratorsPic: [
-        "https://www.planeeo.com/wp-content/uploads/2020/09/louis-roze-trui-pink.jpg",
-        "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
-        "https://breakyouout.com/wp-content/uploads/2018/08/Round-profile-2.png",
+      colaborators: [
+        {
+          id: 2,
+          username: "Susan",
+          email: "susan@core.com",
+          picture:
+          "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
+        },
+        {
+          id: 3,
+          username: "Susan",
+          email: "susan@core.com",
+          picture:
+          "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
+        },
+        {
+          id: 4,
+          username: "Susan",
+          email: "susan@core.com",
+          picture:
+          "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
+        },
       ],
     },
     {
       id: 2,
       title: "Todo for today 2",
       myBoards: false,
-      colaboratorsPic: [
-        "https://www.planeeo.com/wp-content/uploads/2020/09/louis-roze-trui-pink.jpg",
-        "https://www.planeeo.com/wp-content/uploads/2020/09/louis-roze-trui-pink.jpg",
-        "https://www.planeeo.com/wp-content/uploads/2020/09/louis-roze-trui-pink.jpg",
+      colaborators: [
+        {
+          id: 2,
+          username: "Susan",
+          email: "susan@core.com",
+          picture:
+          "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
+        },
+        {
+          id: 3,
+          username: "Susan",
+          email: "susan@core.com",
+          picture:
+          "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
+        },
+        {
+          id: 4,
+          username: "Susan",
+          email: "susan@core.com",
+          picture:
+          "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
+        },
       ],
     },
     {
       id: 3,
       title: "Newww one",
       myBoards: true,
-      colaboratorsPic: [
-        "https://www.planeeo.com/wp-content/uploads/2020/09/louis-roze-trui-pink.jpg",
-        "https://www.planeeo.com/wp-content/uploads/2020/09/louis-roze-trui-pink.jpg",
-        "https://www.planeeo.com/wp-content/uploads/2020/09/louis-roze-trui-pink.jpg",
+      colaborators: [
+        {
+          id: 2,
+          username: "Susan",
+          email: "susan@core.com",
+          picture:
+          "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
+        },
+        {
+          id: 3,
+          username: "Susan",
+          email: "susan@core.com",
+          picture:
+          "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
+        },
+        {
+          id: 4,
+          username: "Susan",
+          email: "susan@core.com",
+          picture:
+          "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
+        },
       ],
     },
     {
       id: 4,
       title: "Newww false one",
       myBoards: false,
-      colaboratorsPic: [
-        "https://www.planeeo.com/wp-content/uploads/2020/09/louis-roze-trui-pink.jpg",
-        "https://www.planeeo.com/wp-content/uploads/2020/09/louis-roze-trui-pink.jpg",
-        "https://www.planeeo.com/wp-content/uploads/2020/09/louis-roze-trui-pink.jpg",
+      colaborators: [
+        {
+          id: 2,
+          username: "Susan",
+          email: "susan@core.com",
+          picture:
+          "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
+        },
+        {
+          id: 3,
+          username: "Susan",
+          email: "susan@core.com",
+          picture:
+          "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
+        },
+        {
+          id: 4,
+          username: "Susan",
+          email: "susan@core.com",
+          picture:
+          "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
+        },
       ],
     },
     {
       id: 5,
       title: "Todo for today 3",
       myBoards: true,
-      colaboratorsPic: [
-        "https://www.planeeo.com/wp-content/uploads/2020/09/louis-roze-trui-pink.jpg",
-        "https://www.planeeo.com/wp-content/uploads/2020/09/louis-roze-trui-pink.jpg",
-        "https://www.planeeo.com/wp-content/uploads/2020/09/louis-roze-trui-pink.jpg",
+      colaborators: [
+        {
+          id: 2,
+          username: "Susan",
+          email: "susan@core.com",
+          picture:
+          "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
+        },
+        {
+          id: 3,
+          username: "Susan",
+          email: "susan@core.com",
+          picture:
+          "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
+        },
+        {
+          id: 4,
+          username: "Susan",
+          email: "susan@core.com",
+          picture:
+          "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
+        },
       ],
     },
     {
       id: 6,
       title: "Todo for today 4",
       myBoards: false,
-      colaboratorsPic: [
-        "https://www.planeeo.com/wp-content/uploads/2020/09/louis-roze-trui-pink.jpg",
-        "https://www.planeeo.com/wp-content/uploads/2020/09/louis-roze-trui-pink.jpg",
-        "https://www.planeeo.com/wp-content/uploads/2020/09/louis-roze-trui-pink.jpg",
+      colaborators: [
+        {
+          id: 2,
+          username: "Susan",
+          email: "susan@core.com",
+          picture:
+          "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
+        },
+        {
+          id: 3,
+          username: "Susan",
+          email: "susan@core.com",
+          picture:
+          "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
+        },
+        {
+          id: 4,
+          username: "Susan",
+          email: "susan@core.com",
+          picture:
+          "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
+        },
       ],
     },
   ]);
@@ -80,11 +188,11 @@ function App() {
 
     switch (route) {
       case 'main':
-        currentView = <Main actualRoute={route} goto={changeRoute} databoard={databoard}/>;
+        currentView = <Main actualRoute={route} goto={changeRoute} databoard={databoard} />;
        
         break;
       case 'showBoard':
-        currentView = <ShowBoard goto={setRoute} id={id} databoard={databoard}/>;
+        currentView = <ShowBoard goto={setRoute} id={id} databoard={databoard} setDataBoard={setDataBoard}/>;
         break;
         default:
           currentView = null

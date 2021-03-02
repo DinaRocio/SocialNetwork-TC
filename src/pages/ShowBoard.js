@@ -8,15 +8,18 @@ import LogoutModal from "./../components/LogoutModal";
 import "../stylesheets/CardModal.css";
 import "../stylesheets/CreateListModal.css";
 import { VscAdd } from "react-icons/vsc";
+import generateKey from "../utils/generator";
 
-function ShowBoard({ goto, id, databoard }) {
-  console.log(id);
+function ShowBoard({ goto, id, databoard, setDataBoard }) {
+  console.log(databoard);
 
-  const boardId = databoard.filter((board) => board.id === id);
+  const currentBoard = databoard.find((board) => board.id === id);
+
+  // const [ddatacolab] =
 
   const [datalist] = useState([
     {
-      id: 67,
+      id: generateKey(),
       boardid: 1,
       title: "Food",
       // cards inicio
@@ -80,11 +83,28 @@ function ShowBoard({ goto, id, databoard }) {
     },
   ]);
 
-  const list = datalist.filter((list) => list.boardid === boardId[0].id);
+  const list = datalist.filter((list) => list.boardid === currentBoard.id);
 
   // console.log(list);
 
-  const currentBoard = boardId[0];
+  const handleCreateColaborator = (e) => {
+    e.preventDefault();
+    const newColaborator = {
+      id: generateKey(),
+      username: "Susan",
+      email: e.target.email.value,
+      picture:
+      "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
+    }
+    setDataBoard((old)=> {
+      return (
+        old.map((board)=> {
+          if (board.id !== currentBoard.id) return board
+          return {...board, colaborators: [...board.colaborators, newColaborator]}
+        })
+      )
+    })
+  }
 
   const [showLogout, setShowLogout] = useState(false);
 
@@ -103,21 +123,21 @@ function ShowBoard({ goto, id, databoard }) {
       <section className="colaborator_section">
         <h2 className="boards_section__titles">{currentBoard.title}</h2>
         <div className="colaborator__reel">
+          {showCreateColab && (
+            <CreateColabModal onSubmit={handleCreateColaborator} onCancel={() => setShowCreateColab(false)} />
+          )}
           <ul className="colaborator_list">
-            {showCreateColab && (
-              <CreateColabModal onCancel={() => setShowCreateColab(false)} />
-            )}
-            <div className="create_colaborator">
+            <li className="create_colaborator" key={1}>
               <VscAdd
                 className="list__card-icon"
                 onClick={() => setShowCreateColab(true)}
               />
-            </div>
-            {currentBoard.colaboratorsPic.map((pic) => {
+            </li>
+            {currentBoard.colaborators.map((colaborator) => {
               return (
-                <li className="colaborator_item" key={Math.random() * 1000}>
+                <li className="colaborator_item" key={colaborator.id}>
                   <div className="colaborator_picture">
-                    <img src={pic} alt="pic" />
+                    <img src={colaborator.picture} alt="pic" />
                   </div>
                 </li>
               );
@@ -135,13 +155,14 @@ function ShowBoard({ goto, id, databoard }) {
         {list.map((listItem) => {
           return (
             <div className="list_card">
-              <h2 className="list__card-title">{listItem.title}</h2>
+              <h2 className="list__card-title" key={listItem.id}>
+                {listItem.title}
+              </h2>
               <ul className="list__card-group">
-              {showCardModal && (
-                  <CardModal  onCancel={() => setShowCardModal(false)} />
+                {showCardModal && (
+                  <CardModal onCancel={() => setShowCardModal(false)} />
                 )}
                 {listItem.cards.map((card) => {
-                
                   return (
                     <li
                       className="card-list"
@@ -221,8 +242,6 @@ function ShowBoard({ goto, id, databoard }) {
           </div>
         </div>
       </section>
-      {/* <CreateCardModal /> */}
-      {/* <CreateColabModal /> */}
     </>
   );
 }

@@ -1,7 +1,8 @@
 import React from "react";
 import { VscChromeClose } from "react-icons/vsc";
 
-function CardModal({ onCancel}) {
+function CardModal({ onCancel, listitem}) {
+  console.log(listitem)
 
   return (
 
