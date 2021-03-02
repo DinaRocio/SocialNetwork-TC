@@ -19,8 +19,8 @@ function ShowBoard({ goto, id, databoard, setDataBoard }) {
 
   const [datalist] = useState([
     {
-      id: generateKey(),
-      boardid: 1,
+      id: 1,
+      boardid:1 ,
       title: "Food",
       // cards inicio
       cards: [

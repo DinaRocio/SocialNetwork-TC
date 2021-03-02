@@ -3,6 +3,7 @@ import "./App.css";
 import Main from "./pages/Main";
 import ShowBoard from "./pages/ShowBoard";
 import { useState } from "react";
+import generateKey from "./utils/generator";
 
 function App() {
   const [databoard, setDataBoard] = useState([
@@ -12,21 +13,21 @@ function App() {
       myBoards: true,
       colaborators: [
         {
-          id: 2,
+          id: generateKey(),
           username: "Susan",
           email: "susan@core.com",
           picture:
           "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
         },
         {
-          id: 3,
+          id: generateKey(),
           username: "Susan",
           email: "susan@core.com",
           picture:
           "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
         },
         {
-          id: 4,
+          id: generateKey(),
           username: "Susan",
           email: "susan@core.com",
           picture:
@@ -40,21 +41,21 @@ function App() {
       myBoards: false,
       colaborators: [
         {
-          id: 2,
+          id: generateKey(),
           username: "Susan",
           email: "susan@core.com",
           picture:
           "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
         },
         {
-          id: 3,
+          id: generateKey(),
           username: "Susan",
           email: "susan@core.com",
           picture:
           "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
         },
         {
-          id: 4,
+          id: generateKey(),
           username: "Susan",
           email: "susan@core.com",
           picture:
@@ -68,21 +69,21 @@ function App() {
       myBoards: true,
       colaborators: [
         {
-          id: 2,
+          id: generateKey(),
           username: "Susan",
           email: "susan@core.com",
           picture:
           "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
         },
         {
-          id: 3,
+          id: generateKey(),
           username: "Susan",
           email: "susan@core.com",
           picture:
           "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
         },
         {
-          id: 4,
+          id: generateKey(),
           username: "Susan",
           email: "susan@core.com",
           picture:
@@ -96,21 +97,21 @@ function App() {
       myBoards: false,
       colaborators: [
         {
-          id: 2,
+          id: generateKey(),
           username: "Susan",
           email: "susan@core.com",
           picture:
           "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
         },
         {
-          id: 3,
+          id: generateKey(),
           username: "Susan",
           email: "susan@core.com",
           picture:
           "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
         },
         {
-          id: 4,
+          id: generateKey(),
           username: "Susan",
           email: "susan@core.com",
           picture:
@@ -124,21 +125,21 @@ function App() {
       myBoards: true,
       colaborators: [
         {
-          id: 2,
+          id: generateKey(),
           username: "Susan",
           email: "susan@core.com",
           picture:
           "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
         },
         {
-          id: 3,
+          id: generateKey(),
           username: "Susan",
           email: "susan@core.com",
           picture:
           "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
         },
         {
-          id: 4,
+          id: generateKey(),
           username: "Susan",
           email: "susan@core.com",
           picture:
@@ -152,21 +153,21 @@ function App() {
       myBoards: false,
       colaborators: [
         {
-          id: 2,
+          id: generateKey(),
           username: "Susan",
           email: "susan@core.com",
           picture:
           "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
         },
         {
-          id: 3,
+          id: generateKey(),
           username: "Susan",
           email: "susan@core.com",
           picture:
           "https://image.freepik.com/free-vector/man-avatar-profile-round-icon_24640-14044.jpg",
         },
         {
-          id: 4,
+          id: generateKey(),
           username: "Susan",
           email: "susan@core.com",
           picture:
