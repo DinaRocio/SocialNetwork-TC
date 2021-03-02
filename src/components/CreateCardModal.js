@@ -1,7 +1,7 @@
 import React from "react";
 import { VscChromeClose } from "react-icons/vsc";
 
-function CreateCardModal({onCancel}) {
+function CreateCardModal({onCancel, onSubmit}) {
   return (
     <div className="dark_container">
       <div className="modal_container">
@@ -12,14 +12,14 @@ function CreateCardModal({onCancel}) {
         <form className="card-form">
           <div className="card-input">
             <input
-              name="title"
+              name="cardtitle"
               type="text"
               placeholder="Write down a card name"
               className="title-input"
             />
             <div className="description-input">
               <label htmlFor="description"  className="card__form-label">Description</label>
-              <input
+              <textarea
                 className="description-input_input"
                 name="description" 
                 type="text"

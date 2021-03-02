@@ -1,8 +1,9 @@
 import React from "react";
 import { VscChromeClose } from "react-icons/vsc";
+import generateKey from "./../utils/generator";
 
-function CardModal({ onCancel, listitem}) {
-  console.log(listitem)
+function CardModal({ onCancel, card}) {
+
 
   return (
 
@@ -18,33 +19,33 @@ function CardModal({ onCancel, listitem}) {
               name="title"
               type="text"
               className="title-input"
+              placeholder={card.title}
             />
             <div className="description-input">
               <label htmlFor="description"  className="card__form-label">Description</label>
-              <input
+              <textarea
                 className="description-input_input"
                 name="description" 
-                type="text"
                 placeholder="Type description here..."
               />
             </div>
           </div>
-
+          
           <ul className="tags_group">
-            <li className="tags_item">
-              <div className="tag">Home</div>
+          {card.tag.map((tagItem) => {
+            return (
+              <li className="tags_item" key={generateKey()}>
+              <div className="tag">{tagItem}</div>
             </li>
-            <li className="tags_item">
-              <div className="tag">Hacer</div>
-            </li>
-            <li className="tags_item">
-              <div className="tag">Now</div>
-            </li>
+            )
+          })}
           </ul>
-
+          
           <h2 className="card__form-label">Comments</h2>
           <ul className="comments_group">
-            <li className="comments_item">
+          {card.comments.map((comment) => {
+            return ( 
+              <li className="comments_item" key={generateKey()}>
               <div className="colaborator_picture">
                 <img
                   src={
@@ -54,38 +55,14 @@ function CardModal({ onCancel, listitem}) {
                 />
               </div>
               <div className="comment">
-                Lorem Ipsum is simply dummy text of the
+                {comment.body}
               </div>
             </li>
-            <li className="comments_item">
-              <div className="colaborator_picture">
-                <img
-                  src={
-                    "https://www.leisureopportunities.co.uk/images/995586_746594.jpg"
-                  }
-                  alt="pic"
-                />
-              </div>
-              <div className="comment">
-                Lorem Ipsum is simply dummy text of the
-              </div>
-            </li>
-            <li className="comments_item">
-              <div className="colaborator_picture">
-                <img
-                  src={
-                    "https://www.leisureopportunities.co.uk/images/995586_746594.jpg"
-                  }
-                  alt="pic"
-                />
-              </div>
-              <div className="comment">
-                Lorem Ipsum is simply dummy text of the
-              </div>
-            </li>
+            )
+          })}
           </ul>
 
-          <input
+          <textarea
             className="comment-input_input"
             name="comment"
             type="text"

@@ -1,6 +1,6 @@
 import React from "react";
 
-function CreateListModal({ onCancel }) {
+function CreateListModal({ onCancel, onSubmit }) {
   return (
     <div
       className="dark_container"
@@ -12,7 +12,7 @@ function CreateListModal({ onCancel }) {
         }}
       ></div>
       <div className="list_modal_container">
-        <form className="list-form">
+        <form onSubmit={onSubmit} className="list-form">
           <input
             type="text"
             name="list_name"
